@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="9" passed="9">
+  <reporter-output>
+    <line>
+      <![CDATA[<h3>Verify title of UI page for Elections lookup.</h3>]]>
+    </line>
+    <line>
+      <![CDATA[<font color="#00aa00">PASSED: Title is correct.</font>]]>
+    </line>
+    <line>
+      <![CDATA[<h3>Verify response when missing query param 'key' to Elections API call.</h3>]]>
+    </line>
+    <line>
+      <![CDATA[{
+    "error": {
+        "errors": [
+            {
+                "domain": "usageLimits",
+                "reason": "dailyLimitExceededUnreg",
+                "message": "Daily Limit for Unauthenticated Use Exceeded. Continued use requires signup.",
+                "extendedHelp": "https://code.google.com/apis/console"
+            }
+        ],
+        "code": 403,
+        "message": "Daily Limit for Unauthenticated Use Exceeded. Continued use requires signup."
+    }
+}]]>
+    </line>
+    <line>
+      <![CDATA[<font color="#00aa00">PASSED: Status code = 403</font>]]>
+    </line>
+    <line>
+      <![CDATA[<h3>Verify response when pass empty query param 'key' to Elections API call.</h3>]]>
+    </line>
+    <line>
+      <![CDATA[{
+    "error": {
+        "errors": [
+            {
+                "domain": "usageLimits",
+                "reason": "keyInvalid",
+                "message": "Bad Request"
+            }
+        ],
+        "code": 400,
+        "message": "Bad Request"
+    }
+}]]>
+    </line>
+    <line>
+      <![CDATA[<font color="#00aa00">PASSED: Status code = 400</font>]]>
+    </line>
+    <line>
+      <![CDATA[<font color="#00aa00">PASSED: Content = keyInvalid</font>]]>
+    </line>
+    <line>
+      <![CDATA[<h3>Verify response when pass invalid query param 'key' to Elections API call.</h3>]]>
+    </line>
+    <line>
+      <![CDATA[{
+    "error": {
+        "errors": [
+            {
+                "domain": "usageLimits",
+                "reason": "keyInvalid",
+                "message": "Bad Request"
+            }
+        ],
+        "code": 400,
+        "message": "Bad Request"
+    }
+}]]>
+    </line>
+    <line>
+      <![CDATA[<font color="#00aa00">PASSED: Status code = 400</font>]]>
+    </line>
+    <line>
+      <![CDATA[<font color="#00aa00">PASSED: Content = keyInvalid</font>]]>
+    </line>
+    <line>
+      <![CDATA[<h3>Verify response attempt to POST instead of GET to Elections API call with no key.</h3>]]>
+    </line>
+    <line>
+      <![CDATA[<html>
+  <body>Not Found</body>
+</html>]]>
+    </line>
+    <line>
+      <![CDATA[<font color="#00aa00">PASSED: Status code = 404</font>]]>
+    </line>
+    <line>
+      <![CDATA[<h3>Verify response attempt to POST instead of GET to Elections API call with empty key.</h3>]]>
+    </line>
+    <line>
+      <![CDATA[<html>
+  <body>Not Found</body>
+</html>]]>
+    </line>
+    <line>
+      <![CDATA[<font color="#00aa00">PASSED: Status code = 404</font>]]>
+    </line>
+    <line>
+      <![CDATA[<h3>Verify response attempt to POST instead of GET to Elections API call with valid key.</h3>]]>
+    </line>
+    <line>
+      <![CDATA[<html>
+  <body>Not Found</body>
+</html>]]>
+    </line>
+    <line>
+      <![CDATA[<font color="#00aa00">PASSED: Status code = 404</font>]]>
+    </line>
+    <line>
+      <![CDATA[<h3>Verify response attempt to PUT instead of GET to Elections API call with valid key.</h3>]]>
+    </line>
+    <line>
+      <![CDATA[<html>
+  <body>Not Found</body>
+</html>]]>
+    </line>
+    <line>
+      <![CDATA[<font color="#00aa00">PASSED: Status code = 404</font>]]>
+    </line>
+    <line>
+      <![CDATA[<h3>Verify response when have valid query param 'key' attached to Elections API call.</h3>]]>
+    </line>
+    <line>
+      <![CDATA[{
+    "kind": "civicinfo#electionsQueryResponse",
+    "elections": [
+        {
+            "id": "2000",
+            "name": "VIP Test Election",
+            "electionDay": "2021-06-06",
+            "ocdDivisionId": "ocd-division/country:us"
+        },
+        {
+            "id": "4933",
+            "name": "Wisconsin Presidential Primary Election",
+            "electionDay": "2020-04-07",
+            "ocdDivisionId": "ocd-division/country:us/state:wi"
+        },
+        {
+            "id": "4964",
+            "name": "DC Presidential and State Primary Election",
+            "electionDay": "2020-06-02",
+            "ocdDivisionId": "ocd-division/country:us/district:dc"
+        }
+    ]
+}]]>
+    </line>
+    <line>
+      <![CDATA[<font color="#00aa00">PASSED: Status code = 200</font>]]>
+    </line>
+    <line>
+      <![CDATA[<font color="#00aa00">PASSED: Count = 3</font>]]>
+    </line>
+  </reporter-output>
+  <suite name="CNNSuite" duration-ms="35439" started-at="2020-04-05T20:37:30 EDT" finished-at="2020-04-05T20:38:05 EDT">
+    <groups>
+    </groups>
+    <test name="ElectionSuite" duration-ms="35439" started-at="2020-04-05T20:37:30 EDT" finished-at="2020-04-05T20:38:05 EDT">
+      <class name="org.terrimitchell.election_test.suites.ElectionUi">
+        <test-method status="PASS" signature="validateUiElectionTitle(java.lang.String)[pri:0, instance:org.terrimitchell.election_test.suites.ElectionUi@1b68ddbd]" name="validateUiElectionTitle" duration-ms="22555" started-at="2020-04-05T20:37:30 EDT" finished-at="2020-04-05T20:37:53 EDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[<h3>Verify title of UI page for Elections lookup.</h3>]]>
+            </line>
+            <line>
+              <![CDATA[<font color="#00aa00">PASSED: Title is correct.</font>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- validateUiElectionTitle -->
+        <test-method status="PASS" signature="cleanup()[pri:0, instance:org.terrimitchell.election_test.suites.ElectionUi@1b68ddbd]" name="cleanup" is-config="true" duration-ms="4853" started-at="2020-04-05T20:37:53 EDT" finished-at="2020-04-05T20:37:58 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanup -->
+      </class> <!-- org.terrimitchell.election_test.suites.ElectionUi -->
+      <class name="org.terrimitchell.election_test.suites.ElectionApi">
+        <test-method status="PASS" signature="failedApiElectionQuery1()[pri:0, instance:org.terrimitchell.election_test.suites.ElectionApi@646d64ab]" name="failedApiElectionQuery1" duration-ms="3950" started-at="2020-04-05T20:37:58 EDT" finished-at="2020-04-05T20:38:01 EDT">
+          <reporter-output>
+            <line>
+              <![CDATA[<h3>Verify response when missing query param 'key' to Elections API call.</h3>]]>
+            </line>
+            <line>
+              <![CDATA[{
+    "error": {
+        "errors": [
+            {
+                "domain": "usageLimits",
+                "reason": "dailyLimitExceededUnreg",
+                "message": "Daily Limit for Unauthenticated Use Exceeded. Continued use requires signup.",
+                "extendedHelp": "https://code.google.com/apis/console"
+            }
+        ],
+        "code": 403,
+        "message": "Daily Limit for Unauthenticated Use Exceeded. Continued use requires signup."
+    }
+}]]>
+            </line>
+            <line>
+              <![CDATA[<font color="#00aa00">PASSED: Status code = 403</font>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- failedApiElectionQuery1 -->
+        <test-method status="PASS" signature="failedApiElectionQuery2()[pri:0, instance:org.terrimitchell.election_test.suites.ElectionApi@646d64ab]" name="failedApiElectionQuery2" duration-ms="1392" started-at="2020-04-05T20:38:01 EDT" finished-at="2020-04-05T20:38:03 EDT">
+          <reporter-output>
+            <line>
+              <![CDATA[<h3>Verify response when pass empty query param 'key' to Elections API call.</h3>]]>
+            </line>
+            <line>
+              <![CDATA[{
+    "error": {
+        "errors": [
+            {
+                "domain": "usageLimits",
+                "reason": "keyInvalid",
+                "message": "Bad Request"
+            }
+        ],
+        "code": 400,
+        "message": "Bad Request"
+    }
+}]]>
+            </line>
+            <line>
+              <![CDATA[<font color="#00aa00">PASSED: Status code = 400</font>]]>
+            </line>
+            <line>
+              <![CDATA[<font color="#00aa00">PASSED: Content = keyInvalid</font>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- failedApiElectionQuery2 -->
+        <test-method status="PASS" signature="failedApiElectionQuery3()[pri:0, instance:org.terrimitchell.election_test.suites.ElectionApi@646d64ab]" name="failedApiElectionQuery3" duration-ms="230" started-at="2020-04-05T20:38:03 EDT" finished-at="2020-04-05T20:38:03 EDT">
+          <reporter-output>
+            <line>
+              <![CDATA[<h3>Verify response when pass invalid query param 'key' to Elections API call.</h3>]]>
+            </line>
+            <line>
+              <![CDATA[{
+    "error": {
+        "errors": [
+            {
+                "domain": "usageLimits",
+                "reason": "keyInvalid",
+                "message": "Bad Request"
+            }
+        ],
+        "code": 400,
+        "message": "Bad Request"
+    }
+}]]>
+            </line>
+            <line>
+              <![CDATA[<font color="#00aa00">PASSED: Status code = 400</font>]]>
+            </line>
+            <line>
+              <![CDATA[<font color="#00aa00">PASSED: Content = keyInvalid</font>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- failedApiElectionQuery3 -->
+        <test-method status="PASS" signature="failedApiElectionQuery4()[pri:0, instance:org.terrimitchell.election_test.suites.ElectionApi@646d64ab]" name="failedApiElectionQuery4" duration-ms="977" started-at="2020-04-05T20:38:03 EDT" finished-at="2020-04-05T20:38:04 EDT">
+          <reporter-output>
+            <line>
+              <![CDATA[<h3>Verify response attempt to POST instead of GET to Elections API call with no key.</h3>]]>
+            </line>
+            <line>
+              <![CDATA[<html>
+  <body>Not Found</body>
+</html>]]>
+            </line>
+            <line>
+              <![CDATA[<font color="#00aa00">PASSED: Status code = 404</font>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- failedApiElectionQuery4 -->
+        <test-method status="PASS" signature="failedApiElectionQuery5()[pri:0, instance:org.terrimitchell.election_test.suites.ElectionApi@646d64ab]" name="failedApiElectionQuery5" duration-ms="267" started-at="2020-04-05T20:38:04 EDT" finished-at="2020-04-05T20:38:04 EDT">
+          <reporter-output>
+            <line>
+              <![CDATA[<h3>Verify response attempt to POST instead of GET to Elections API call with empty key.</h3>]]>
+            </line>
+            <line>
+              <![CDATA[<html>
+  <body>Not Found</body>
+</html>]]>
+            </line>
+            <line>
+              <![CDATA[<font color="#00aa00">PASSED: Status code = 404</font>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- failedApiElectionQuery5 -->
+        <test-method status="PASS" signature="failedApiElectionQuery6()[pri:0, instance:org.terrimitchell.election_test.suites.ElectionApi@646d64ab]" name="failedApiElectionQuery6" duration-ms="215" started-at="2020-04-05T20:38:04 EDT" finished-at="2020-04-05T20:38:05 EDT">
+          <reporter-output>
+            <line>
+              <![CDATA[<h3>Verify response attempt to POST instead of GET to Elections API call with valid key.</h3>]]>
+            </line>
+            <line>
+              <![CDATA[<html>
+  <body>Not Found</body>
+</html>]]>
+            </line>
+            <line>
+              <![CDATA[<font color="#00aa00">PASSED: Status code = 404</font>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- failedApiElectionQuery6 -->
+        <test-method status="PASS" signature="failedApiElectionQuery7()[pri:0, instance:org.terrimitchell.election_test.suites.ElectionApi@646d64ab]" name="failedApiElectionQuery7" duration-ms="578" started-at="2020-04-05T20:38:05 EDT" finished-at="2020-04-05T20:38:05 EDT">
+          <reporter-output>
+            <line>
+              <![CDATA[<h3>Verify response attempt to PUT instead of GET to Elections API call with valid key.</h3>]]>
+            </line>
+            <line>
+              <![CDATA[<html>
+  <body>Not Found</body>
+</html>]]>
+            </line>
+            <line>
+              <![CDATA[<font color="#00aa00">PASSED: Status code = 404</font>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- failedApiElectionQuery7 -->
+        <test-method status="PASS" signature="validApiElectionQuery1()[pri:0, instance:org.terrimitchell.election_test.suites.ElectionApi@646d64ab]" name="validApiElectionQuery1" duration-ms="224" started-at="2020-04-05T20:38:05 EDT" finished-at="2020-04-05T20:38:05 EDT">
+          <reporter-output>
+            <line>
+              <![CDATA[<h3>Verify response when have valid query param 'key' attached to Elections API call.</h3>]]>
+            </line>
+            <line>
+              <![CDATA[{
+    "kind": "civicinfo#electionsQueryResponse",
+    "elections": [
+        {
+            "id": "2000",
+            "name": "VIP Test Election",
+            "electionDay": "2021-06-06",
+            "ocdDivisionId": "ocd-division/country:us"
+        },
+        {
+            "id": "4933",
+            "name": "Wisconsin Presidential Primary Election",
+            "electionDay": "2020-04-07",
+            "ocdDivisionId": "ocd-division/country:us/state:wi"
+        },
+        {
+            "id": "4964",
+            "name": "DC Presidential and State Primary Election",
+            "electionDay": "2020-06-02",
+            "ocdDivisionId": "ocd-division/country:us/district:dc"
+        }
+    ]
+}]]>
+            </line>
+            <line>
+              <![CDATA[<font color="#00aa00">PASSED: Status code = 200</font>]]>
+            </line>
+            <line>
+              <![CDATA[<font color="#00aa00">PASSED: Count = 3</font>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- validApiElectionQuery1 -->
+      </class> <!-- org.terrimitchell.election_test.suites.ElectionApi -->
+    </test> <!-- ElectionSuite -->
+  </suite> <!-- CNNSuite -->
+</testng-results>

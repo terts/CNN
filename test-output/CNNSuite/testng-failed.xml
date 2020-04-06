@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [CNNSuite]">
+  <test thread-count="5" name="ElectionSuite(failed)">
+    <parameter name="browser" value="Firefox"/>
+    <classes>
+      <class name="org.terrimitchell.election_test.suites.ElectionApi">
+        <methods>
+          <include name="validApiElectionQuery2"/>
+        </methods>
+      </class> <!-- org.terrimitchell.election_test.suites.ElectionApi -->
+    </classes>
+  </test> <!-- ElectionSuite(failed) -->
+</suite> <!-- Failed suite [CNNSuite] -->

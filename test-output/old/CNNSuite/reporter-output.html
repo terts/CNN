@@ -1,0 +1,97 @@
+<h2>Reporter output</h2><table><tr><td><h3>Verify title of UI page for Elections lookup.</h3></td></tr>
+<tr><td><font color="#00aa00">PASSED: Title is correct.</font></td></tr>
+<tr><td><h3>Verify response when missing query param 'key' to Elections API call.</h3></td></tr>
+<tr><td>{
+    "error": {
+        "errors": [
+            {
+                "domain": "usageLimits",
+                "reason": "dailyLimitExceededUnreg",
+                "message": "Daily Limit for Unauthenticated Use Exceeded. Continued use requires signup.",
+                "extendedHelp": "https://code.google.com/apis/console"
+            }
+        ],
+        "code": 403,
+        "message": "Daily Limit for Unauthenticated Use Exceeded. Continued use requires signup."
+    }
+}</td></tr>
+<tr><td><font color="#00aa00">PASSED: Status code = 403</font></td></tr>
+<tr><td><h3>Verify response when pass empty query param 'key' to Elections API call.</h3></td></tr>
+<tr><td>{
+    "error": {
+        "errors": [
+            {
+                "domain": "usageLimits",
+                "reason": "keyInvalid",
+                "message": "Bad Request"
+            }
+        ],
+        "code": 400,
+        "message": "Bad Request"
+    }
+}</td></tr>
+<tr><td><font color="#00aa00">PASSED: Status code = 400</font></td></tr>
+<tr><td><font color="#00aa00">PASSED: Content = keyInvalid</font></td></tr>
+<tr><td><h3>Verify response when pass invalid query param 'key' to Elections API call.</h3></td></tr>
+<tr><td>{
+    "error": {
+        "errors": [
+            {
+                "domain": "usageLimits",
+                "reason": "keyInvalid",
+                "message": "Bad Request"
+            }
+        ],
+        "code": 400,
+        "message": "Bad Request"
+    }
+}</td></tr>
+<tr><td><font color="#00aa00">PASSED: Status code = 400</font></td></tr>
+<tr><td><font color="#00aa00">PASSED: Content = keyInvalid</font></td></tr>
+<tr><td><h3>Verify response attempt to POST instead of GET to Elections API call with no key.</h3></td></tr>
+<tr><td><html>
+  <body>Not Found</body>
+</html></td></tr>
+<tr><td><font color="#00aa00">PASSED: Status code = 404</font></td></tr>
+<tr><td><h3>Verify response attempt to POST instead of GET to Elections API call with empty key.</h3></td></tr>
+<tr><td><html>
+  <body>Not Found</body>
+</html></td></tr>
+<tr><td><font color="#00aa00">PASSED: Status code = 404</font></td></tr>
+<tr><td><h3>Verify response attempt to POST instead of GET to Elections API call with valid key.</h3></td></tr>
+<tr><td><html>
+  <body>Not Found</body>
+</html></td></tr>
+<tr><td><font color="#00aa00">PASSED: Status code = 404</font></td></tr>
+<tr><td><h3>Verify response attempt to PUT instead of GET to Elections API call with valid key.</h3></td></tr>
+<tr><td><html>
+  <body>Not Found</body>
+</html></td></tr>
+<tr><td><font color="#00aa00">PASSED: Status code = 404</font></td></tr>
+<tr><td><h3>Verify response when have valid query param 'key' attached to Elections API call.</h3></td></tr>
+<tr><td>{
+    "kind": "civicinfo#electionsQueryResponse",
+    "elections": [
+        {
+            "id": "2000",
+            "name": "VIP Test Election",
+            "electionDay": "2021-06-06",
+            "ocdDivisionId": "ocd-division/country:us"
+        },
+        {
+            "id": "4933",
+            "name": "Wisconsin Presidential Primary Election",
+            "electionDay": "2020-04-07",
+            "ocdDivisionId": "ocd-division/country:us/state:wi"
+        },
+        {
+            "id": "4964",
+            "name": "DC Presidential and State Primary Election",
+            "electionDay": "2020-06-02",
+            "ocdDivisionId": "ocd-division/country:us/district:dc"
+        }
+    ]
+}</td></tr>
+<tr><td><font color="#00aa00">PASSED: Status code = 200</font></td></tr>
+<tr><td><font color="#00aa00">PASSED: Count = 3</font></td></tr>
+</table>

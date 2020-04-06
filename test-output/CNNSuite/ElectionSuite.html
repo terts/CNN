@@ -1,0 +1,274 @@
+<html>
+<head>
+<title>TestNG:  ElectionSuite</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>ElectionSuite</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>9/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Sun Apr 05 20:37:30 EDT 2020</td>
+</tr>
+<tr><td>Total time:</td><td>35 seconds (35439 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='org.terrimitchell.election_test.suites.ElectionApi.failedApiElectionQuery1()'><b>failedApiElectionQuery1</b><br>Test class: org.terrimitchell.election_test.suites.ElectionApi<br/>
+<a href="#Output-1408482749" onClick='toggleBox("Output-1408482749", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1408482749" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1408482749">
+<h3>Verify response when missing query param 'key' to Elections API call.</h3><br/>
+{
+    "error": {
+        "errors": [
+            {
+                "domain": "usageLimits",
+                "reason": "dailyLimitExceededUnreg",
+                "message": "Daily Limit for Unauthenticated Use Exceeded. Continued use requires signup.",
+                "extendedHelp": "https://code.google.com/apis/console"
+            }
+        ],
+        "code": 403,
+        "message": "Daily Limit for Unauthenticated Use Exceeded. Continued use requires signup."
+    }
+}<br/>
+<font color="#00aa00">PASSED: Status code = 403</font><br/>
+</div>
+</td>
+<td></td>
+<td>3</td>
+<td>org.terrimitchell.election_test.suites.ElectionApi@646d64ab</td></tr>
+<tr>
+<td title='org.terrimitchell.election_test.suites.ElectionApi.failedApiElectionQuery2()'><b>failedApiElectionQuery2</b><br>Test class: org.terrimitchell.election_test.suites.ElectionApi<br/>
+<a href="#Output-903064416" onClick='toggleBox("Output-903064416", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-903064416" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-903064416">
+<h3>Verify response when pass empty query param 'key' to Elections API call.</h3><br/>
+{
+    "error": {
+        "errors": [
+            {
+                "domain": "usageLimits",
+                "reason": "keyInvalid",
+                "message": "Bad Request"
+            }
+        ],
+        "code": 400,
+        "message": "Bad Request"
+    }
+}<br/>
+<font color="#00aa00">PASSED: Status code = 400</font><br/>
+<font color="#00aa00">PASSED: Content = keyInvalid</font><br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>org.terrimitchell.election_test.suites.ElectionApi@646d64ab</td></tr>
+<tr>
+<td title='org.terrimitchell.election_test.suites.ElectionApi.failedApiElectionQuery3()'><b>failedApiElectionQuery3</b><br>Test class: org.terrimitchell.election_test.suites.ElectionApi<br/>
+<a href="#Output-1903051549" onClick='toggleBox("Output-1903051549", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1903051549" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1903051549">
+<h3>Verify response when pass invalid query param 'key' to Elections API call.</h3><br/>
+{
+    "error": {
+        "errors": [
+            {
+                "domain": "usageLimits",
+                "reason": "keyInvalid",
+                "message": "Bad Request"
+            }
+        ],
+        "code": 400,
+        "message": "Bad Request"
+    }
+}<br/>
+<font color="#00aa00">PASSED: Status code = 400</font><br/>
+<font color="#00aa00">PASSED: Content = keyInvalid</font><br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>org.terrimitchell.election_test.suites.ElectionApi@646d64ab</td></tr>
+<tr>
+<td title='org.terrimitchell.election_test.suites.ElectionApi.failedApiElectionQuery4()'><b>failedApiElectionQuery4</b><br>Test class: org.terrimitchell.election_test.suites.ElectionApi<br/>
+<a href="#Output-1323235180" onClick='toggleBox("Output-1323235180", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1323235180" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1323235180">
+<h3>Verify response attempt to POST instead of GET to Elections API call with no key.</h3><br/>
+<html>
+  <body>Not Found</body>
+</html><br/>
+<font color="#00aa00">PASSED: Status code = 404</font><br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>org.terrimitchell.election_test.suites.ElectionApi@646d64ab</td></tr>
+<tr>
+<td title='org.terrimitchell.election_test.suites.ElectionApi.failedApiElectionQuery5()'><b>failedApiElectionQuery5</b><br>Test class: org.terrimitchell.election_test.suites.ElectionApi<br/>
+<a href="#Output-1424188812" onClick='toggleBox("Output-1424188812", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1424188812" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1424188812">
+<h3>Verify response attempt to POST instead of GET to Elections API call with empty key.</h3><br/>
+<html>
+  <body>Not Found</body>
+</html><br/>
+<font color="#00aa00">PASSED: Status code = 404</font><br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>org.terrimitchell.election_test.suites.ElectionApi@646d64ab</td></tr>
+<tr>
+<td title='org.terrimitchell.election_test.suites.ElectionApi.failedApiElectionQuery6()'><b>failedApiElectionQuery6</b><br>Test class: org.terrimitchell.election_test.suites.ElectionApi<br/>
+<a href="#Output-1294058862" onClick='toggleBox("Output-1294058862", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1294058862" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1294058862">
+<h3>Verify response attempt to POST instead of GET to Elections API call with valid key.</h3><br/>
+<html>
+  <body>Not Found</body>
+</html><br/>
+<font color="#00aa00">PASSED: Status code = 404</font><br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>org.terrimitchell.election_test.suites.ElectionApi@646d64ab</td></tr>
+<tr>
+<td title='org.terrimitchell.election_test.suites.ElectionApi.failedApiElectionQuery7()'><b>failedApiElectionQuery7</b><br>Test class: org.terrimitchell.election_test.suites.ElectionApi<br/>
+<a href="#Output-859604881" onClick='toggleBox("Output-859604881", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-859604881" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-859604881">
+<h3>Verify response attempt to PUT instead of GET to Elections API call with valid key.</h3><br/>
+<html>
+  <body>Not Found</body>
+</html><br/>
+<font color="#00aa00">PASSED: Status code = 404</font><br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>org.terrimitchell.election_test.suites.ElectionApi@646d64ab</td></tr>
+<tr>
+<td title='org.terrimitchell.election_test.suites.ElectionApi.validApiElectionQuery1()'><b>validApiElectionQuery1</b><br>Test class: org.terrimitchell.election_test.suites.ElectionApi<br/>
+<a href="#Output-1023423954" onClick='toggleBox("Output-1023423954", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1023423954" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1023423954">
+<h3>Verify response when have valid query param 'key' attached to Elections API call.</h3><br/>
+{
+    "kind": "civicinfo#electionsQueryResponse",
+    "elections": [
+        {
+            "id": "2000",
+            "name": "VIP Test Election",
+            "electionDay": "2021-06-06",
+            "ocdDivisionId": "ocd-division/country:us"
+        },
+        {
+            "id": "4933",
+            "name": "Wisconsin Presidential Primary Election",
+            "electionDay": "2020-04-07",
+            "ocdDivisionId": "ocd-division/country:us/state:wi"
+        },
+        {
+            "id": "4964",
+            "name": "DC Presidential and State Primary Election",
+            "electionDay": "2020-06-02",
+            "ocdDivisionId": "ocd-division/country:us/district:dc"
+        }
+    ]
+}<br/>
+<font color="#00aa00">PASSED: Status code = 200</font><br/>
+<font color="#00aa00">PASSED: Count = 3</font><br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>org.terrimitchell.election_test.suites.ElectionApi@646d64ab</td></tr>
+<tr>
+<td title='org.terrimitchell.election_test.suites.ElectionUi.validateUiElectionTitle()'><b>validateUiElectionTitle</b><br>Test class: org.terrimitchell.election_test.suites.ElectionUi<br>Parameters: Firefox<br/>
+<a href="#Output-929776179" onClick='toggleBox("Output-929776179", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-929776179" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-929776179">
+<h3>Verify title of UI page for Elections lookup.</h3><br/>
+<font color="#00aa00">PASSED: Title is correct.</font><br/>
+</div>
+</td>
+<td></td>
+<td>22</td>
+<td>org.terrimitchell.election_test.suites.ElectionUi@1b68ddbd</td></tr>
+</table><p>
+</body>
+</html>

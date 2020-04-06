@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="CNNSuite">
+  <test name="ElectionSuite">
+    <parameter name="browser" value="${browser}" />
+    <classes>
+        <class name="org.terrimitchell.election_test.suites.ElectionUi" />
+        <class name="org.terrimitchell.election_test.suites.ElectionApi" />
+    </classes>
+  </test>
+</suite>
