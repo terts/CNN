@@ -24,6 +24,7 @@ public class ApiRequests {
      * Set up a URL Request Specification with Query Params.
      * @param base - base URI
      * @param path - base path
+     * @param params - map of the query string parameters
      * @return built request spec
      */
     public static RequestSpecification setUrlWithQueryParams(String base, String path, 
